@@ -1,7 +1,8 @@
-@extends('layouts.app')
+@extends('auth.loginlayout')
 
 @section('content')
-<div class="container">
+    <div class="page-header header-filter" style="background-image: url('{{ asset('assets/img/city.jpg') }}'); background-size: cover; background-position: top center;">
+    <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
