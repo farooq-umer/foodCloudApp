@@ -13,8 +13,8 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create('Users', function (Blueprint $table) {
+            $table->bigIncrements('UserId');
             $table->string('name');
             $table->text('address')->nullable();
             $table->string('Phone', 100)->nullable();
