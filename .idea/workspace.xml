@@ -2,16 +2,338 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f81d2a1-22db-435f-b9a2-446cea1c2061" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/loginlayout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_alerts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_badges.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_cards.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_checkboxes.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_core-bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_drawer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_example-pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_footers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_headers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_info-areas.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_layout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_misc.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_pills.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_radios.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_responsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_ripples.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_switches.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_tabs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_togglebutton.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_jumbotron.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_nav-divider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_navbar-align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_size.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_table-row.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_text-emphasis.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_text-hide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/mixins/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_background.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_embed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_screenreaders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/bootstrap/scss/utilities/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/cards/_card-carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/cards/_card-login.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/cards/_card-plain.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_animations.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_colored-shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_drawer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_layout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_navbar-colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_navs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/mixins/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/plugins/_plugin-datetime-picker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/plugins/_plugin-nouislider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_body.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_bootstrap-material-design-base.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_bootstrap-material-design.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_brand.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_colors-map.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_drawer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_layout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_menu.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_modals.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_snackbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_state.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/login_assets/scss/material-kit/variables/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_alerts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_cards.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_checkboxes.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_core-bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_example-pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_fixed-plugin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_footers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_headers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_info-areas.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_misc.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_popups.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_radios.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_responsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_ripples.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_sidebar-and-main-panel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_social-buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_tabs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_togglebutton.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_breadcrumb.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_button-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_close.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_functions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_input-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_jumbotron.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_media.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_print.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_transitions.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/bootstrap-grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/bootstrap-reboot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/bootstrap.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_background-variant.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_box-shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_caret.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_gradients.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_grid-framework.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_grid.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_image.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_nav-divider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_navbar-align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_reset-text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_resize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_size.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_table-row.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-emphasis.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-hide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_text-truncate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/mixins/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_align.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_background.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_clearfix.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_embed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_flex.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_float.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_position.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_screenreaders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_sizing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/bootstrap/scss/utilities/_visibility.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/cards/_card-plain.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/cards/_card-profile.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/cards/_card-stats.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_alert.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_animations.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_breakpoints.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_chartist.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_colored-shadows.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_drawer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_hover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_layout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_navbar-colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_navs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_sidebar-color.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_transparency.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_type.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/mixins/_vendor-prefixes.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/plugins/_animate.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/plugins/_chartist.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/plugins/_perfect-scrollbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_body.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_bootstrap-material-design-base.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_bootstrap-material-design.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_brand.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_card.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_colors-map.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_custom-forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_drawer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_layout.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_list-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_menu.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_modals.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_shadow.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_snackbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_spacing.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_state.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_tables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/material-dashboard/variables/_type.scss" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,10 +350,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/baselayout.blade.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+            <state relative-caret-position="141">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding>
+                <element signature="e#7#52#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,7 +369,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/register.blade.php" />
@@ -70,6 +394,7 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/baselayout.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
       </list>
     </option>
   </component>
@@ -203,32 +528,13 @@
             <path>
               <item name="foodCloudApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="foodCloudApp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="foodCloudApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="foodCloudApp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="foodCloudApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foodCloudApp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="foodCloudApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foodCloudApp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="foodCloudApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foodCloudApp" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,18 +589,18 @@
       <option name="presentableId" value="Default" />
       <updated>1570372899061</updated>
       <workItem from="1570372900675" duration="1134000" />
-      <workItem from="1570374458715" duration="25665000" />
+      <workItem from="1570374458715" duration="29051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26799000" />
+    <option name="totallyTimeSpent" value="30185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15348525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17292225" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -321,45 +627,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AuthServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="39" lean-forward="true" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding>
-            <element signature="e#23#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -649,8 +916,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/baselayout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="246">
           <caret line="44" column="14" lean-forward="true" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="629" column="20" selection-start-line="629" selection-start-column="20" selection-end-line="629" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
