@@ -23,7 +23,7 @@ class CreateFormsSubmittedTable extends Migration
             $table->json('FormSubmittedDataJson')->nullable();
             $table->timestamps();
             $table->foreign('FormId')->references('FormId')->on('Forms');
-            $table->foreign('UserId')->references('UserId')->on('Users');
+            $table->foreign('UserId')->references('id')->on('users');
             $table->foreign('FormStatusId')->references('FormStatusId')->on('FormStatuses');
         });
     }

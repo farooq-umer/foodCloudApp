@@ -25,7 +25,12 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <!-- your sidebar here -->
+          <li class="nav-item active  ">
+            <a class="nav-link" href="{{ route('home') }}">
+              <i class="material-icons">dashboard</i>
+              <p>Forms</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

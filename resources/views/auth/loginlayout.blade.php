@@ -1,27 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-  <meta charset="utf-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/img/apple-icon.png') }}">
-  <link rel="icon" type="image/png" href="{{ asset('assets/img/favicon.png') }}">
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <!-- CSRF Token -->
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-
-  <title>{{ config('app.name', 'Food Cloud') }}</title>
-
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
-
-  <!-- Fonts and icons -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
-  <!-- CSS Files -->
-  <link href="{{ asset('assets/login_assets/css/material-kit.css?v=2.0.6') }}" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{ asset('assets/login_assets/demo/demo.css') }}" rel="stylesheet" />
+  @include('auth.includes.head')
+  <title>@if(View::hasSection('title'))@yield('title') - @endif{{ config('app.name', 'Food Cloud') }}</title>
 </head>
 
 <body class="login-page sidebar-collapse">
@@ -39,6 +20,21 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">
+              <i class="material-icons">person</i> Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('register') }}">
+              <i class="material-icons">content_paste</i> Register
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);">
+              <i class="material-icons">cloud_download</i> Download APP
+            </a>
+          </li>
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               <i class="material-icons">apps</i> Components
@@ -51,11 +47,6 @@
                 <i class="material-icons">content_paste</i> Register
               </a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0);">
-              <i class="material-icons">cloud_download</i> Download APP
-            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="javascript:void(0);" data-original-title="Follow us on Twitter">
@@ -77,50 +68,13 @@
     </div>
   </nav>
 
-    @yield('content')
+  @yield('content')
 
-    <footer class="footer">
-      <div class="container">
-        <nav class="float-left">
-          <ul>
-            <li>
-              <a href="https://www.food.cloud">
-                Food Cloud
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);">
-                Licenses
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="copyright float-right">
-          &copy;
-          <script>
-            document.write(new Date().getFullYear())
-          </script>, made with <i class="material-icons">favorite</i>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <!--   Core JS Files   -->
-  <script src="{{ asset('assets/login_assets/js/core/jquery.min.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('assets/login_assets/js/core/popper.min.js')}}" type="text/javascript"></script>
-  <script src="{{ asset('assets/login_assets/js/core/bootstrap-material-design.min.js') }}" type="text/javascript"></script>
-  <script src="{{ asset('assets/login_assets/js/plugins/moment.min.js') }}"></script>
-  <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-  <script src="{{ asset('assets/login_assets/js/material-kit.js?v=2.0.6') }}" type="text/javascript"></script>
+  <footer class="footer">
+    @include('auth.includes.footer')
+  </footer>
+
+  @include('auth.includes.scripts')
+
 </body>
-
 </html>
