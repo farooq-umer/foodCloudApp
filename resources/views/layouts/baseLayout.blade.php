@@ -20,13 +20,13 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('home') }}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item active  ">
-            <a class="nav-link" href="{{ route('home') }}">
+            <a class="nav-link" href="{{ route('show_forms') }}">
               <i class="material-icons">dashboard</i>
               <p>Forms</p>
             </a>

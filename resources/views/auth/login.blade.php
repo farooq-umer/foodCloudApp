@@ -1,4 +1,4 @@
-@extends('auth.loginlayout')
+@extends('auth.loginLayout')
 
 @section('content')
     <div class="page-header header-filter" style="background-image: url('{{ asset('assets/img/bg7.jpg') }}'); background-size: cover; background-position: top center;">
