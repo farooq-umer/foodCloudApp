@@ -13,11 +13,11 @@ class CreateFormStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('FormStatuses', function (Blueprint $table) {
-            $table->bigIncrements('FormStatusId');
-            $table->string('FormStatus', 100);
-            $table->string('FormStatusDescription')->nullable();
-            $table->string('FormStatusCode', 50);
+        Schema::create('tbl_form_statuses', function (Blueprint $table) {
+            $table->bigIncrements('form_status_id');
+            $table->string('form_status_name', 100);
+            $table->string('form_status_description')->nullable();
+            $table->string('form_status_code', 50)->unique();
             $table->timestamps();
         });
     }

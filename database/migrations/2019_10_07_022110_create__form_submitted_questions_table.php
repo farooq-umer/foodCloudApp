@@ -13,14 +13,14 @@ class CreateFormSubmittedQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('FormSubmittedQuestions', function (Blueprint $table) {
-            $table->bigIncrements('FormSubmittedQuestionId');
-            $table->unsignedBigInteger('FormQuestionId')->index();
-            $table->unsignedBigInteger('FormAnswerId')->index();
-            $table->unsignedBigInteger('FormSubmittedId');
-            $table->foreign('FormQuestionId')->references('FormQuestionId')->on('FormQuestions');
-            $table->foreign('FormAnswerId')->references('FormAnswerId')->on('FormAnswers');
-            $table->foreign('FormSubmittedId')->references('FormSubmittedId')->on('FormsSubmitted');
+        Schema::create('tbl_form_submitted_questions', function (Blueprint $table) {
+            $table->bigIncrements('form_submitted_question_id');
+            $table->unsignedBigInteger('form_question_id')->index();
+            $table->unsignedBigInteger('form_answer_id')->index();
+            $table->unsignedBigInteger('form_submitted_id');
+            $table->foreign('form_question_id')->references('form_question_id')->on('tbl_form_questions');
+            $table->foreign('form_answer_id')->references('form_answer_id')->on('tbl_form_answers');
+            $table->foreign('form_submitted_id')->references('form_submitted_id')->on('tbl_forms_submitted');
         });
     }
     /**

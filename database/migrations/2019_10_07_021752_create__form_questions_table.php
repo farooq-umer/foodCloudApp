@@ -13,17 +13,17 @@ class CreateFormQuestionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('FormQuestions', function (Blueprint $table) {
-            $table->bigIncrements('FormQuestionId');
-            $table->string('FormQuestion');
-            $table->unsignedBigInteger('FormQuestionTypeId');
-            $table->unsignedBigInteger('FormId')->index();
-            $table->boolean('IsMandatory');
-            $table->boolean('IsActive');
-            $table->json('FormQuestionDataJson')->nullable();
+        Schema::create('tbl_form_questions', function (Blueprint $table) {
+            $table->bigIncrements('form_question_id');
+            $table->string('form_question');
+            $table->unsignedBigInteger('form_question_type_id');
+            $table->unsignedBigInteger('form_id')->index();
+            $table->boolean('is_mandatory');
+            $table->boolean('is_active');
+            $table->json('form_question_data_json')->nullable();
             $table->timestamps();
-            $table->foreign('FormQuestionTypeId')->references('FormQuestionTypeId')->on('FormQuestionTypes');
-            $table->foreign('FormId')->references('FormId')->on('Forms');
+            $table->foreign('form_question_type_id')->references('form_question_type_id')->on('tbl_form_question_types');
+            $table->foreign('form_id')->references('form_id')->on('tbl_forms');
         });
     }
 

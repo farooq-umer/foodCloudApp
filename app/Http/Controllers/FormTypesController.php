@@ -14,7 +14,12 @@ class FormTypesController extends Controller
      */
     public function index()
     {
-        //
+        //$id = auth()->id(); $u = auth()->user(); $g = auth()->guest();
+        //dd($id,$u,$g);
+
+        $formTypes = FormType::all()->sortKeysDesc(); //dd($formTypes);
+
+        return view('admin/forms/formTypes/showFormTypes', ['formTypes' => $formTypes]);
     }
 
     /**
@@ -24,7 +29,7 @@ class FormTypesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/forms/formTypes/createFormType');
     }
 
     /**
@@ -35,7 +40,40 @@ class FormTypesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return response()->json([
+            'success'  => 'Data Added successfully.'
+        ]);
+
+//        if($request->ajax())
+//        {
+//            $rules = array(
+//                'first_name.*'  => 'required',
+//                'last_name.*'  => 'required'
+//            );
+//            $error = Validator::make($request->all(), $rules);
+//            if($error->fails())
+//            {
+//                return response()->json([
+//                    'error'  => $error->errors()->all()
+//                ]);
+//            }
+//
+//            $first_name = $request->first_name;
+//            $last_name = $request->last_name;
+//            for($count = 0; $count < count($first_name); $count++)
+//            {
+//                $data = array(
+//                    'first_name' => $first_name[$count],
+//                    'last_name'  => $last_name[$count]
+//                );
+//                $insert_data[] = $data;
+//            }
+//
+//            FormType::insert($insert_data);
+//            return response()->json([
+//                'success'  => 'Data Added successfully.'
+//            ]);
+//        }
     }
 
     /**

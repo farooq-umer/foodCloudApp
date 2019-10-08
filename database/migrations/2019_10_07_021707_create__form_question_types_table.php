@@ -13,12 +13,12 @@ class CreateFormQuestionTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('FormQuestionTypes', function (Blueprint $table) {
-            $table->bigIncrements('FormQuestionTypeId');
-            $table->string('FormQuestionType');
-            $table->string('FormQuestionTypeDescription')->nullable();
-            $table->string('FormQuestionTypeCode', 50);
-            $table->json('FormQuestionTypeDataJson')->nullable();
+        Schema::create('tbl_form_question_types', function (Blueprint $table) {
+            $table->bigIncrements('form_question_type_id');
+            $table->string('form_question_type_name');
+            $table->string('form_question_type_description')->nullable();
+            $table->string('form_question_type_code', 50)->unique();
+            $table->json('form_question_type_data_json')->nullable();
             $table->timestamps();
         });
     }

@@ -13,16 +13,16 @@ class CreateFormAnswersTable extends Migration
      */
     public function up()
     {
-        Schema::create('FormAnswers', function (Blueprint $table) {
-            $table->bigIncrements('FormAnswerId');
-            $table->json('FormAnswer');
-            $table->json('FormAnswerDefaultValue')->nullable();
-            $table->unsignedBigInteger('FormQuestionId')->index();
-            $table->unsignedBigInteger('FormId')->index();
-            $table->json('FormAnswerDataJson')->nullable();
+        Schema::create('tbl_form_answers', function (Blueprint $table) {
+            $table->bigIncrements('form_answer_id');
+            $table->json('form_answer');
+            $table->json('form_answer_default_value')->nullable();
+            $table->unsignedBigInteger('form_question_id')->index();
+            $table->unsignedBigInteger('form_id')->index();
+            $table->json('form_answer_data_json')->nullable();
             $table->timestamps();
-            $table->foreign('FormQuestionId')->references('FormQuestionId')->on('FormQuestions');
-            $table->foreign('FormId')->references('FormId')->on('Forms');
+            $table->foreign('form_question_id')->references('form_question_id')->on('tbl_form_questions');
+            $table->foreign('form_id')->references('form_id')->on('tbl_forms');
         });
     }
 

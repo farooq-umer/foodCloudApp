@@ -13,10 +13,10 @@ class CreateFormTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('FormTypes', function (Blueprint $table) {
-            $table->bigIncrements('FormTypeId');
-            $table->string('FormType');
-            $table->string('FormTypeCode', 100);
+        Schema::create('tbl_form_types', function (Blueprint $table) {
+            $table->bigIncrements('form_type_id');
+            $table->string('form_type_name');
+            $table->string('Form_type_code', 100)->unique();
             $table->timestamps();
         });
     }

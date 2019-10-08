@@ -19,16 +19,28 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
+          <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('home') }}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active  ">
+          <li class="nav-item {{ Request::is('forms') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('show_forms') }}">
               <i class="material-icons">dashboard</i>
               <p>Forms</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Request::is('form_types') ? 'active' : '' }} ">
+            <a class="nav-link" href="{{ route('show_form_types') }}">
+              <i class="material-icons">dashboard</i>
+              <p>Form Types</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link alert-danger text-danger" href="{{ route('show_form_types') }}">
+              <i class="material-icons text-danger">warning</i>
+              <p><b>DELETE ZONE</b></p>
             </a>
           </li>
         </ul>
@@ -43,7 +55,7 @@
       <div class="content">
         <div class="container-fluid">
 
-          <main class="py-4">
+          <main class="py-1">
             @yield('content')
           </main>
 

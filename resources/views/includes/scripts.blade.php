@@ -32,12 +32,15 @@
 <!-- Library for adding dinamically elements -->
 <script src="{{ asset('assets/js/plugins/arrive.min.js') }}"></script>
 <!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+{{--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>--}}
 <!-- Chartist JS -->
 <script src="{{ asset('assets/js/plugins/chartist.min.js') }}"></script>
 <!--  Notifications Plugin    -->
 <script src="{{ asset('assets/js/plugins/bootstrap-notify.js') }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="{{ asset('assets/js/material-dashboard.js?v=2.1.1') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/material-dashboard.js?v=2.1.1') }}"></script>
+
 <!-- Custom JavaScript -->
-<script src="{{ asset('assets/js/material-dashboard.js?v=2.1.1') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/material-dashboard.js?v=2.1.1') }}"></script>
+{{--<script src="{{ mix('js/app.js') }}"></script>--}}
+<script src="{{ asset('js/fc_custom_app.js') }}"></script>

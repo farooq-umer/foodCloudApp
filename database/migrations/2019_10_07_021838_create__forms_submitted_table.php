@@ -13,18 +13,18 @@ class CreateFormsSubmittedTable extends Migration
      */
     public function up()
     {
-        Schema::create('FormsSubmitted', function (Blueprint $table) {
-            $table->bigIncrements('FormSubmittedId');
-            $table->unsignedBigInteger('FormId')->index();
-            $table->unsignedBigInteger('UserId');
-            $table->unsignedBigInteger('FormStatusId')->index();
-            $table->string('FormSubmittedUniqueCode');
-            $table->text('Comments')->nullable();
-            $table->json('FormSubmittedDataJson')->nullable();
+        Schema::create('tbl_forms_submitted', function (Blueprint $table) {
+            $table->bigIncrements('form_submitted_id');
+            $table->unsignedBigInteger('form_id')->index();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('form_status_id')->index();
+            $table->string('form_submitted_unique_code');
+            $table->text('form_submitted_comments')->nullable();
+            $table->json('form_submitted_data_json')->nullable();
             $table->timestamps();
-            $table->foreign('FormId')->references('FormId')->on('Forms');
-            $table->foreign('UserId')->references('id')->on('users');
-            $table->foreign('FormStatusId')->references('FormStatusId')->on('FormStatuses');
+            $table->foreign('form_id')->references('form_id')->on('tbl_forms');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('form_status_id')->references('form_status_id')->on('tbl_form_statuses');
         });
     }
 
