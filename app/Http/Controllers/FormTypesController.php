@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FormType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class FormTypesController extends Controller
 {
@@ -40,9 +41,32 @@ class FormTypesController extends Controller
      */
     public function store(Request $request)
     {
-        return response()->json([
-            'success'  => 'Data Added successfully.'
-        ]);
+        Log::debug($request);
+
+        //retrieve all of the input data as an array
+        //$allArr = $request->all();
+        //Log::debug(print_r($allArr, true));
+
+        //$name = $request->input('name');
+        //$uri = $request->path();
+
+        // Without Query String...
+        //$url = $request->url();
+
+        // With Query String...
+        //$url = $request->fullUrl();
+
+        if ($request->isMethod('post')) {
+            return response()->json([
+                'success'  => 'Post Data Received.'
+            ]);
+        }
+
+        //https://laravel.com/docs/5.7/requests
+
+        //The is method allows you to verify that the incoming request path matches a given pattern.
+        // You may use the * character as a wildcard when utilizing this method:
+        //if ($request->is('admin/*')) { }
 
 //        if($request->ajax())
 //        {

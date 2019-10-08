@@ -39,7 +39,7 @@ class Form {
 
         for(let i = 0; i < numOfCols; i++) {
             new_row += '<td>';
-            new_row += `<input type="${type}" name=[] placeholder="${placeholder}" class="form-control ${classes}">`;
+            new_row += `<input type="${type}" name="${name}" placeholder="${placeholder}" class="form-control ${classes}">`;
             new_row += '</td>';
         }
 
@@ -91,7 +91,7 @@ class Form {
         $('table.table-main').on('click', '.delRowBtn', function(event) {
             $(this).closest('tr').remove();
 
-            that.displayMessage('Row has been Deleted successfully.', 'danger');
+            that.showNotificationMessage('rose', 'Row has been Deleted successfully.');
         });
     };
 
@@ -106,7 +106,7 @@ class Form {
         }, {
             //type: type[color],
             type: type,
-            timer: 2500,
+            timer: 2000,
             placement: {
                 from: from ? from : 'top', // top | bottom
                 align: align ? align : 'center' // left | right| center
@@ -119,21 +119,24 @@ class Form {
 $( document ).ready(function() {
 
     const form = new Form();
+    let rowCount = 0;
 
     addNewQuestionnaireType = () => {
 
-        //form.addNewRow();
-        // let new_row = '<tr>';
-        // new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Name','questionnaire_type_name');
-        // new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Code','questionnaire_type_code');
-        // new_row += '<td><button class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
-        // new_row += '<tr>';
+        rowCount++;
 
-        let new_row = '<tr>';
-        new_row += '<td><input type="text" placeholder="Enter Questionnaire Name" name="questionnaire_type_name" class="form-control">';
-        new_row += '<td><input type="text" placeholder="Enter Questionnaire Code" name="questionnaire_type_code" class="form-control">';
+        //form.addNewRow();
+        let new_row = `<tr id="rowId${rowCount}">`;
+        new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Name','form_type_name[]');
+        new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Code','form_type_code[]');
         new_row += '<td><button class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
         new_row += '<tr>';
+
+        // let new_row = `<tr id="rowId${rowCount}">`;
+        // new_row += '<td><input type="text" placeholder="Enter Questionnaire Name" name="qtName[]" class="form-control">';
+        // new_row += '<td><input type="text" placeholder="Enter Questionnaire Code" name="qtCode[]" class="form-control">';
+        // new_row += '<td><button class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
+        // new_row += '<tr>';
         $('#createQuestionnaireTypeTableMain > tbody').append(new_row);
     };
 
