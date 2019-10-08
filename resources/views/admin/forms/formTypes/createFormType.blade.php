@@ -4,11 +4,9 @@
 
 @section('content')
     <div class="container">
-        <div id="results" class="row justify-content-center"></div>
-
         <div class="row justify-content-end">
             <button class="btn btn-primary mr-2" onclick="addNewQuestionnaireType()"> Create <i class="material-icons">control_point</i></button>
-            <button id="store-button-href" class="btn btn-primary" data-href="{{ route('create_form_type') }}" onclick="saveNewQuestionnaireType()"> Store <i class="material-icons">control_point</i></button>
+            <button id="store-button-href" class="btn btn-primary" data-href="{{ route('create_form_type') }}" onclick="saveNewQuestionnaireType()"> Preview <i class="material-icons">control_point</i></button>
         </div>
         <div class="row">
             <div class="card">
