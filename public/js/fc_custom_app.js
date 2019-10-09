@@ -1,7 +1,8 @@
 class Form {
 
     constructor() {
-        this.runDeleteRowCheck();
+        this.tblRowCount = 0;
+        //this.runRemoveRowCheck();
         //this.grabTableRowChange();
     }
 
@@ -31,26 +32,6 @@ class Form {
             }
         }
         return matchedObjsArr;
-    };
-
-    createNewInputField = (numOfCols, type, placeholder='', name='', classes='') => {
-
-        let new_row = '';
-
-        for(let i = 0; i < numOfCols; i++) {
-            new_row += '<td>';
-            new_row += `<input type="${type}" name="${name}" placeholder="${placeholder}" class="form-control ${classes}">`;
-            new_row += '</td>';
-        }
-
-        return new_row;
-    };
-
-    addNewRow = () => {
-        let new_row = '<tr>';
-        new_row += '<td><input type="text" placeholder="Enter Questionnaire Name" name="questionnaire_type_name" class="form-control">';
-        new_row += '<td><input type="text" placeholder="Enter Questionnaire Code" name="questionnaire_type_code" class="form-control">';
-        $('#createQuestionnaireTypeTableMain > tbody').append(new_row);
     };
 
     grabTableRowChange = () => {
@@ -85,13 +66,14 @@ class Form {
         alert('row' + element.parentNode.parentNode.rowIndex + ' - column' + element.parentNode.cellIndex);
     };
 
-    runDeleteRowCheck = () => {
-        console.log('fc app is running');
+    runRemoveRowCheck = () => {
+        console.log('runRemoveRowCheck is running');
         const that = this;
         $('table.table-main').on('click', '.delRowBtn', function(event) {
             $(this).closest('tr').remove();
 
-            that.showNotificationMessage('rose', 'Row has been Deleted successfully.');
+            that.tblRowCount--;
+            //that.showNotificationMessage('rose', 'Row has been Deleted successfully.');
         });
     };
 
@@ -106,7 +88,7 @@ class Form {
         }, {
             //type: type[color],
             type: type,
-            timer: 2000,
+            timer: type === 'danger' ? 100000 : 3000,
             placement: {
                 from: from ? from : 'top', // top | bottom
                 align: align ? align : 'center' // left | right| center
@@ -114,37 +96,60 @@ class Form {
         });
     };
 
+    createNewInputField = (numOfCols, type, placeholder='', name='', classes='') => {
+
+        let new_row = '';
+
+        for(let i = 0; i < numOfCols; i++) {
+            new_row += '<td>';
+            new_row += `<input type="${type}" name="${name}" placeholder="${placeholder}" required class="form-control ${classes}">`;
+            new_row += '</td>';
+        }
+
+        return new_row;
+    };
+
+    validateString = (string) => {
+        return string.replace(/[^a-zA-Z0-9-_. ]/g, '');
+    }
+
 }
 
 $( document ).ready(function() {
 
     const form = new Form();
-    let rowCount = 0;
+
+    $('#btn-save-submit').attr('disabled','disabled');
 
     addNewQuestionnaireType = () => {
 
-        rowCount++;
+        form.tblRowCount++;
+        if(form.tblRowCount > 0) {
+            $('#btn-create-form-type').attr('disabled', 'disabled');
+            $('#btn-save-submit').attr('disabled', false);
+        }
+        console.log(form.tblRowCount);
 
-        //form.addNewRow();
-        let new_row = `<tr id="rowId${rowCount}">`;
-        new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Name','form_type_name[]');
-        new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Code','form_type_code[]');
-        new_row += '<td><button class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
-        new_row += '<tr>';
-
-        // let new_row = `<tr id="rowId${rowCount}">`;
-        // new_row += '<td><input type="text" placeholder="Enter Questionnaire Name" name="qtName[]" class="form-control">';
-        // new_row += '<td><input type="text" placeholder="Enter Questionnaire Code" name="qtCode[]" class="form-control">';
+        // let new_row = `<tr id="rowId${form.tblRowCount}">`;
+        // new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Name','form_type_name[]');
+        // new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Code','form_type_code[]');
         // new_row += '<td><button class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
         // new_row += '<tr>';
+
+        let new_row = `<tr id="rowId${form.tblRowCount}">`;
+        new_row += '<td><input type="text" placeholder="Enter Questionnaire Name" name="form_type_name[]" required class="form-control">';
+        new_row += '<td><input type="text" placeholder="Enter Questionnaire Code" name="form_type_code[]" required class="form-control">';
+        new_row += '<td><button onclick="removeTableRow(this)" class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
+        new_row += '<tr>';
+
         $('#createQuestionnaireTypeTableMain > tbody').append(new_row);
     };
 
     $('#create_questionnaire_type_form').on('submit', function(event) {
         event.preventDefault();
-
         const route = $('#store-button-href').data('href');
         //console.log('route url:', route);
+        //const d = $(this);
         //const d = $(this).serialize();
         //console.log('row_data', d);
 
@@ -154,27 +159,55 @@ $( document ).ready(function() {
             data:$(this).serialize(),
             dataType:'json',
             beforeSend:function(){
-                $('#save').attr('disabled','disabled');
+                $('#btn-save-submit').attr('disabled','disabled');
             },
             success:function(data)
             {
-                if(data.error)
-                {
-                    let error_html = '';
-                    for(let count = 0; count < data.error.length; count++)
-                    {
-                        error_html += '<p>'+data.error[count]+'</p>';
-                    }
-                    form.showNotificationMessage('danger', error_html);
+                if(data.error) {
+                    form.showNotificationMessage('danger', data.error);
                 }
-                else
-                {
+                else {
                     form.showNotificationMessage('success', data.success);
                 }
-                $('#save').attr('disabled', false);
+                $('#createQuestionnaireTypeTableMain > tbody').html('');
+                $('#btn-create-form-type').attr('disabled', false);
+                form.tblRowCount = 0;
+            },
+            error:function(data, status) {
+                const errors = $.parseJSON(data.responseText);
+
+                let errors_html = '';
+                $.each(errors, function (key, value) {
+                    if(typeof value === 'object' && value !== null) {
+                        $.each(value, function (key1, value1) {
+                            errors_html += `<div> ${value1} </div>`;
+                        })
+                    }
+                    else {
+                        errors_html += `<div> ${value} </div>`;
+                    }
+                 });
+
+                form.showNotificationMessage('danger', errors_html);
+                $('#btn-save-submit').attr('disabled', false);
+                // laravel sends JSON response with 422 HTTP status code on form validation failure.
             }
         })
+
     });
+
+    removeTableRow = (element) => {
+
+        $('table.table-main').on('click', '.delRowBtn', function(event) {
+            $(this).closest('tr').remove();
+        });
+        //that.showNotificationMessage('rose', 'Row has been Deleted successfully.');
+        form.tblRowCount--;
+        if(form.tblRowCount === 0) {
+            $('#btn-create-form-type').attr('disabled', false);
+            $('#btn-save-submit').attr('disabled', 'disabled');
+        }
+    };
 
     saveNewQuestionnaireType = () => {
 
@@ -184,11 +217,18 @@ $( document ).ready(function() {
 
         form.showNotificationMessage('primary', 'Preview Route: ' + link);
 
+        //table.getElementsByTagName("tr").length;
+        //const row_count = $('#bannerTable tr').length;
         //Select a value with the following two ways:
         //let v1 = $("#txt_name").val();
         //let v2 = $("#txt_name").attr('value');
         //let v3 = document.getElementById('txt_name').value
         //console.log([v1,v2,v3]);
+
+        //To Remove all data/rows from table at Once
+        //$('#createQuestionnaireTypeTableMain').find('tbody').detach();
+        //$('#createQuestionnaireTypeTableMain > tbody').empty();
+        //$jq("tbody", myTable).remove();
     };
 
 });

@@ -16,7 +16,7 @@ class CreateFormTypesTable extends Migration
         Schema::create('tbl_form_types', function (Blueprint $table) {
             $table->bigIncrements('form_type_id');
             $table->string('form_type_name');
-            $table->string('Form_type_code', 100)->unique();
+            $table->string('form_type_code', 100)->unique();
             $table->timestamps();
         });
     }

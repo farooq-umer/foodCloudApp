@@ -5,7 +5,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-end">
-            <button class="btn btn-primary mr-2" onclick="addNewQuestionnaireType()"> Create <i class="material-icons">control_point</i></button>
+            <button id="btn-create-form-type" class="btn btn-primary mr-2" onclick="addNewQuestionnaireType()"> New <i class="material-icons">control_point</i></button>
             <button id="store-button-href" class="btn btn-primary" data-href="{{ route('create_form_type') }}" onclick="saveNewQuestionnaireType()"> Preview <i class="material-icons">control_point</i></button>
         </div>
         <div class="row">
@@ -35,7 +35,7 @@
                                 <td colspan="2" align="right">&nbsp;</td>
                                 <td>
                                     @csrf
-                                    <input type="submit" name="save" id="save" data-href="{{ route('create_form_type') }}" class="btn btn-primary" value="Save" />
+                                    <input type="submit" name="save" id="btn-save-submit" data-href="{{ route('create_form_type') }}" class="btn btn-primary" value="Save" />
                                 </td>
                             </tr>
                             </tfoot>

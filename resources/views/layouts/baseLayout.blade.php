@@ -53,6 +53,11 @@
       </header>
 
       <div class="content">
+
+        <div class="container">
+          @include('includes.flash-message')
+        </div>
+
         <div class="container-fluid">
 
           <main class="py-1">

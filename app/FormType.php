@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class FormType extends Model
 {
-    public $table = 'tbl_form_types';
+    protected $table = 'tbl_form_types';
+    protected $primaryKey = 'form_type_id';
     //public $timestamps = true;
 
     /**
@@ -15,6 +16,6 @@ class FormType extends Model
      * @var array
      */
     protected $fillable = [
-        'FormType', 'FormTypeCode',
+        'form_type_name', 'form_type_code',
     ];
 }

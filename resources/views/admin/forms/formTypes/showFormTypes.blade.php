@@ -5,9 +5,9 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-end">
-            <ul class="nav fc-border-primary rounded">
+            <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('show_create_form_type') }}">
+                    <a class="nav-link btn btn-primary" href="{{ route('show_create_form_type') }}">
                         <b>Create</b>
                         <i class="material-icons">control_point</i>
                     </a>
@@ -39,6 +39,9 @@
                             <th>
                                 <strong>Date Updated</strong>
                             </th>
+                            <th>
+                                <strong>Edit</strong>
+                            </th>
                             </thead>
                             <tbody>
                             @foreach($formTypes as $formType)
@@ -50,13 +53,16 @@
                                     {{ $formType->form_type_name }}
                                 </td>
                                 <td>
-                                    {{ $formType->Form_type_code }}
+                                    {{ $formType->form_type_code }}
                                 </td>
                                 <td>
                                     {{ $formType->created_at }}
                                 </td>
                                 <td>
                                     {{ $formType->updated_at }}
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary" href="{{ route('show_edit_form_type', $formType->form_type_id) }}">Edit</a>
                                 </td>
                             </tr>
                             @endforeach
