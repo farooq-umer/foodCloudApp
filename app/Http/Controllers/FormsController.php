@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Form;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
+use DB;
+use Session;
 
 class FormsController extends Controller
 {
@@ -14,7 +17,13 @@ class FormsController extends Controller
      */
     public function index()
     {
-        return view('admin.forms.showForms');
+        $forms = DB::table('tbl_forms')
+            ->join('tbl_form_types', 'tbl_forms.form_type_id', '=', 'tbl_form_types.form_type_id')
+            ->select('tbl_forms.*', 'tbl_form_types.form_type_name')
+            ->get();
+        //dd($forms);
+
+        return view('admin.forms.showForms', ['forms' => $forms]);
     }
 
     /**
@@ -24,7 +33,10 @@ class FormsController extends Controller
      */
     public function create()
     {
-        //
+        $formTypes = DB::table('tbl_form_types')->orderBy('form_type_id', 'desc')->get();
+        //$formTypeNames = DB::table('tbl_form_types')->pluck('form_type_name');
+
+        return view('admin.forms.createForm', compact('formTypes'));
     }
 
     /**
@@ -35,7 +47,35 @@ class FormsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        if ($request->isMethod('POST')) {
+
+            $validatedData = $request->validate([
+                'form_name' => 'required|string|distinct|min:6|regex:/^[A-Za-z0-9 _.-]*$/',
+                'form_description' => 'string|max:255|regex:/^[A-Za-z0-9 _.-]*$/',
+                'form_type_id' => 'required|integer'
+            ]);
+
+            try {
+                $id = DB::table('tbl_forms')->insertGetId(
+                    [
+                        'form_name' => request('form_name'),
+                        'form_description' => request('form_description'),
+                        'form_type_id' => request('form_type_id')
+                    ]
+                );
+
+                return response()->json([
+                    'success'  => 'New Questionnaire Created Successfully.'
+                ]);
+            }
+            catch(QueryException $ex) {
+
+                return response()->json([
+                    'error'  => $ex->getMessage()
+                ]);
+            }
+        }
     }
 
     /**
@@ -55,21 +95,27 @@ class FormsController extends Controller
      * @param  \App\Form  $form
      * @return \Illuminate\Http\Response
      */
-    public function edit(Form $form)
+    public function edit($form_id)
     {
-        //
+        $formArr = DB::table('tbl_forms')
+            ->where('form_id', $form_id)
+            ->join('tbl_form_types', 'tbl_forms.form_type_id', '=', 'tbl_form_types.form_type_id')
+            ->select('tbl_forms.*', 'tbl_form_types.form_type_name')
+            ->get();
+        //dd($formArr);
+
+        return view('admin.forms.editForm', compact('formArr'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Form  $form
-     * @return \Illuminate\Http\Response
+     * @param $form_id
+     * @return void
      */
-    public function update(Request $request, Form $form)
+    public function update($form_id)
     {
-        //
+        dd($form_id);
     }
 
     /**
@@ -78,8 +124,21 @@ class FormsController extends Controller
      * @param  \App\Form  $form
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Form $form)
+    public function destroy(Request $request,  $form_id)
     {
-        //
+        if ($request->isMethod('DELETE')) {
+            try {
+
+                DB::table('tbl_forms')->where('form_id', $form_id)->delete();
+
+                return redirect()->route('show_forms')->with('warning',"Questionnaire with ID: {$form_id} DELETED successfully!");
+
+            } catch (QueryException $ex) {
+
+                return response()->json([
+                    'error'  => $ex->getMessage()
+                ]);
+            }
+        }
     }
 }

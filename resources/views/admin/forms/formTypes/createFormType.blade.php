@@ -5,8 +5,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-end">
-            <button id="btn-create-form-type" class="btn btn-primary mr-2" onclick="addNewQuestionnaireType()"> New <i class="material-icons">control_point</i></button>
-            <button id="store-button-href" class="btn btn-primary" data-href="{{ route('create_form_type') }}" onclick="saveNewQuestionnaireType()"> Preview <i class="material-icons">control_point</i></button>
+            <button id="btn-create-new-form" data-href="{{ route('create_form_type') }}" class="btn btn-primary mr-2" onclick="createNewFormType()"> New <i class="material-icons">control_point</i></button>
         </div>
         <div class="row">
             <div class="card">
@@ -15,9 +14,9 @@
                     <p class="card-category">Questionnaire Type Code <b><i>Must</i></b> be Unique</p>
                 </div>
                 <div class="card-body">
-                    <form method="post" id="create_questionnaire_type_form">
+                    <form method="post" id="create_new_form_on_submit">
                     <div class="table-responsive">
-                        <table class="table table-main" id="createQuestionnaireTypeTableMain">
+                        <table class="table table-main" id="createNewFormTableMain">
                             <thead class=" text-primary">
                             <th>
                                 <strong>Questionnaire Type Name</strong>

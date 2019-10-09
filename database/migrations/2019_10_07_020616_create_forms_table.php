@@ -17,7 +17,7 @@ class CreateFormsTable extends Migration
             $table->bigIncrements('form_id');
             $table->string('form_name');
             $table->string('form_description')->nullable();
-            $table->boolean('is_active');
+            $table->boolean('is_active')->default(1);
             $table->unsignedBigInteger('form_type_id')->index();
             $table->json('form_data_json')->nullable();
             $table->timestamps();

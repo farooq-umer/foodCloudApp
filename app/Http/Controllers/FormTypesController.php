@@ -135,7 +135,7 @@ class FormTypesController extends Controller
      * @param  \App\FormType  $formType
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $form_type_id)
+    public function edit($form_type_id)
     {
         //$formType = DB::table('tbl_form_types')->where('form_type_id', $form_type_id);
         $formType = FormType::findOrFail($form_type_id);
@@ -210,7 +210,7 @@ class FormTypesController extends Controller
                 DB::table('tbl_form_types')->where('form_type_id', $form_type_id)->delete();
 //              $formTypeDeleted = FormType::findOrFail($form_type_id)->delete();
 
-                return redirect()->route('show_form_types')->with('warning','Questionnaire type DELETED successfully!');
+                return redirect()->route('show_form_types')->with('warning',"Questionnaire type with with ID: {$form_type_id} DELETED successfully!");
                 //return back()->with('success','Questionnaire type DELETED successfully!');
 
             } catch (QueryException $ex) {

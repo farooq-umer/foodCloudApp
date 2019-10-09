@@ -121,11 +121,11 @@ $( document ).ready(function() {
 
     $('#btn-save-submit').attr('disabled','disabled');
 
-    addNewQuestionnaireType = () => {
+    createNewFormType = () => {
 
         form.tblRowCount++;
         if(form.tblRowCount > 0) {
-            $('#btn-create-form-type').attr('disabled', 'disabled');
+            $('#btn-create-new-form').attr('disabled', 'disabled');
             $('#btn-save-submit').attr('disabled', false);
         }
         console.log(form.tblRowCount);
@@ -142,12 +142,31 @@ $( document ).ready(function() {
         new_row += '<td><button onclick="removeTableRow(this)" class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
         new_row += '<tr>';
 
-        $('#createQuestionnaireTypeTableMain > tbody').append(new_row);
+        $('#createNewFormTableMain > tbody').append(new_row);
     };
 
-    $('#create_questionnaire_type_form').on('submit', function(event) {
+    createNewForm = ()  => {
+
+        form.tblRowCount++;
+        if(form.tblRowCount > 0) {
+            $('#btn-create-new-form').attr('disabled', 'disabled');
+            $('#btn-save-submit').attr('disabled', false);
+        }
+        console.log(form.tblRowCount);
+
+        let new_row = `<tr id="rowId${form.tblRowCount}">`;
+        new_row += form.createNewInputField(1,'text', 'Enter Name','form_name[]');
+        new_row += form.createNewInputField(1,'text', 'Enter Description','form_description[]');
+        new_row += form.createNewInputField(1,'text', 'form_type_id','form_type_id[]');
+        new_row += '<td><button onclick="removeTableRow(this)" class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
+        new_row += '<tr>';
+
+        $('#createNewFormTableMain > tbody').append(new_row);
+    };
+
+    $('#create_new_form_on_submit').on('submit', function(event) {
         event.preventDefault();
-        const route = $('#store-button-href').data('href');
+        const route = $('#btn-create-new-form').data('href');
         //console.log('route url:', route);
         //const d = $(this);
         //const d = $(this).serialize();
@@ -169,8 +188,8 @@ $( document ).ready(function() {
                 else {
                     form.showNotificationMessage('success', data.success);
                 }
-                $('#createQuestionnaireTypeTableMain > tbody').html('');
-                $('#btn-create-form-type').attr('disabled', false);
+                $('#createNewFormTableMain > tbody').html('');
+                $('#btn-create-new-form').attr('disabled', false);
                 form.tblRowCount = 0;
             },
             error:function(data, status) {
@@ -204,7 +223,7 @@ $( document ).ready(function() {
         //that.showNotificationMessage('rose', 'Row has been Deleted successfully.');
         form.tblRowCount--;
         if(form.tblRowCount === 0) {
-            $('#btn-create-form-type').attr('disabled', false);
+            $('#btn-create-new-form').attr('disabled', false);
             $('#btn-save-submit').attr('disabled', 'disabled');
         }
     };
@@ -212,7 +231,7 @@ $( document ).ready(function() {
     saveNewQuestionnaireType = () => {
 
         //window.location.href = $(this).data('href');
-        const link = $('#store-button-href').data('href');
+        const link = $('#btn-preview-button').data('href');
         console.log('Preview Cliked', link);
 
         form.showNotificationMessage('primary', 'Preview Route: ' + link);
@@ -226,8 +245,8 @@ $( document ).ready(function() {
         //console.log([v1,v2,v3]);
 
         //To Remove all data/rows from table at Once
-        //$('#createQuestionnaireTypeTableMain').find('tbody').detach();
-        //$('#createQuestionnaireTypeTableMain > tbody').empty();
+        //$('#createNewFormTableMain').find('tbody').detach();
+        //$('#createNewFormTableMain > tbody').empty();
         //$jq("tbody", myTable).remove();
     };
 
