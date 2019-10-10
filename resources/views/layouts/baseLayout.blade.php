@@ -25,16 +25,28 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item {{ Request::is('forms') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('show_forms') }}">
-              <i class="material-icons">dashboard</i>
-              <p>Forms</p>
-            </a>
-          </li>
           <li class="nav-item {{ Request::is('form_types') ? 'active' : '' }} ">
             <a class="nav-link" href="{{ route('show_form_types') }}">
               <i class="material-icons">dashboard</i>
-              <p>Form Types</p>
+              <p>Questionnaire Types</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Request::is('question_types') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('show_question_types') }}">
+              <i class="material-icons">dashboard</i>
+              <p>Question Types</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Request::is('forms') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('show_forms') }}">
+              <i class="material-icons">dashboard</i>
+              <p>Questionnaires</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Request::is('null') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('show_question_types') }}">
+              <i class="material-icons">dashboard</i>
+              <p>Add Questions</p>
             </a>
           </li>
           <li class="nav-item">

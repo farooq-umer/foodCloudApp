@@ -39,3 +39,11 @@ Route::get('/forms/{form}/edit', 'FormsController@edit')->name('show_edit_form')
 Route::patch('/forms/{form}', 'FormsController@update')->name('update_form')->middleware('auth');
 Route::delete('/forms/{form}', 'FormsController@destroy')->name('delete_form')->middleware('auth');
 
+// Question Types
+Route::get('/question_types', 'QuestionTypesController@index')->name('show_question_types')->middleware('auth');
+Route::get('/question_types/create', 'QuestionTypesController@create')->name('show_create_question_type')->middleware('auth');
+Route::get('/question_types/{form}', 'QuestionTypesController@show')->name('show_question_type')->middleware('auth');
+Route::post('/question_types', 'QuestionTypesController@store')->name('create_question_type')->middleware('auth');
+Route::get('/question_types/{form}/edit', 'QuestionTypesController@edit')->name('show_edit_question_type')->middleware('auth');
+Route::patch('/question_types/{form}', 'QuestionTypesController@update')->name('update_question_type')->middleware('auth');
+Route::delete('/question_types/{form}', 'QuestionTypesController@destroy')->name('delete_question_type')->middleware('auth');

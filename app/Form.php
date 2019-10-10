@@ -8,7 +8,6 @@ class Form extends Model
 {
     protected $table = 'tbl_forms';
     protected $primaryKey = 'form_id';
-    public $timestamps = true;
 
     /**
      * The attributes that are mass assignable.
