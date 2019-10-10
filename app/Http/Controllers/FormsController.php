@@ -23,7 +23,7 @@ class FormsController extends Controller
             ->get();
         //dd($forms);
 
-        return view('admin.forms.showForms', ['forms' => $forms]);
+        return view('admin.pages.showForms', ['forms' => $forms]);
     }
 
     /**
@@ -36,7 +36,7 @@ class FormsController extends Controller
         $formTypes = DB::table('tbl_form_types')->orderBy('form_type_id', 'desc')->get();
         //$formTypeNames = DB::table('tbl_form_types')->pluck('form_type_name');
 
-        return view('admin.forms.createForm', compact('formTypes'));
+        return view('admin.pages.createForm', compact('formTypes'));
     }
 
     /**
@@ -104,7 +104,7 @@ class FormsController extends Controller
             ->get();
         //dd($formArr);
 
-        return view('admin.forms.editForm', compact('formArr'));
+        return view('admin.pages.editForm', compact('formArr'));
     }
 
     /**

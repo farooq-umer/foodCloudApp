@@ -24,7 +24,7 @@ class FormTypesController extends Controller
         //$formTypes = FormType::all()->sortKeysDesc(); //dd($formTypes);
         $formTypes = DB::table('tbl_form_types')->orderBy('form_type_id', 'desc')->get();
 
-        return view('admin.forms.formTypes.showFormTypes', ['formTypes' => $formTypes]);
+        return view('admin.pages.formTypes.showFormTypes', ['formTypes' => $formTypes]);
     }
 
     /**
@@ -34,7 +34,7 @@ class FormTypesController extends Controller
      */
     public function create()
     {
-        return view('admin.forms.formTypes.createFormType');
+        return view('admin.pages.formTypes.createFormType');
     }
 
     /**
@@ -141,7 +141,7 @@ class FormTypesController extends Controller
         $formType = FormType::findOrFail($form_type_id);
         //dd($formType);
 
-        return view('admin.forms.formTypes.editFormType', ['formType' => $formType]);
+        return view('admin.pages.formTypes.editFormType', ['formType' => $formType]);
     }
 
     /**

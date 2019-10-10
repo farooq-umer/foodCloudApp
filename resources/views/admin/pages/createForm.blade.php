@@ -10,7 +10,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-header card-header-primary">
-                    <h4 class="card-title ">Create New Questionnaire</h4>
+                    <h4 class="card-title "><b>Create New Questionnaire</b></h4>
                     <p class="card-category"> </p>
                 </div>
                 <div class="card-body">

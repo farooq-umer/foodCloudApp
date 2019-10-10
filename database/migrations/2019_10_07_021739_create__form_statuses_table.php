@@ -29,6 +29,6 @@ class CreateFormStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('FormStatuses');
+        Schema::dropIfExists('tbl_form_statuses');
     }
 }

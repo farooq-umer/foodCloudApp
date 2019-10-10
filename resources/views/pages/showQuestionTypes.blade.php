@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="card-header card-header-primary">
                     <h4 class="card-title ">Question Types</h4>
-                    <p class="card-category"> Here you can View, Edit and Add Question Types</p>
+                    <p class="card-category"> Here you can View, Edit and Add New Question Types</p>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

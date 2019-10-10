@@ -34,6 +34,6 @@ class CreateFormQuestionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('FormQuestions');
+        Schema::dropIfExists('tbl_form_questions');
     }
 }

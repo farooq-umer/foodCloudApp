@@ -10,7 +10,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-header card-header-primary">
-                    <h4 class="card-title ">Create New Questionnaire Type</h4>
+                    <h4 class="card-title "><b>Create New Questionnaire Type</b></h4>
                     <p class="card-category">Questionnaire Type Code <b><i>Must</i></b> be Unique</p>
                 </div>
                 <div class="card-body">

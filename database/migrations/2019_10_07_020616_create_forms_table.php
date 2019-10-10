@@ -32,6 +32,6 @@ class CreateFormsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Forms');
+        Schema::dropIfExists('tbl_forms');
     }
 }

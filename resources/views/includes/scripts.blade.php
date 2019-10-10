@@ -44,3 +44,4 @@
 <script src="{{ asset('assets/js/material-dashboard.js?v=2.1.1') }}"></script>
 {{--<script src="{{ mix('js/app.js') }}"></script>--}}
 <script src="{{ asset('js/fc_custom_app.js') }}"></script>
+<script src="{{ asset('js/addQuestions.js') }}"></script>

@@ -17,7 +17,7 @@ class QuestionTypesController extends Controller
     {
         $QTypes = DB::table('tbl_form_question_types')->orderBy('form_question_type_id', 'desc')->get();
 
-        return view('forms.showQuestionTypes', ['QTypes' => $QTypes]);
+        return view('pages.showQuestionTypes', ['QTypes' => $QTypes]);
     }
 
     /**

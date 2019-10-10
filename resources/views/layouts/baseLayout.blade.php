@@ -43,8 +43,8 @@
               <p>Questionnaires</p>
             </a>
           </li>
-          <li class="nav-item {{ Request::is('null') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('show_question_types') }}">
+          <li class="nav-item {{ Request::is('add_questions') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('show_questionnaires_to_add_questions') }}">
               <i class="material-icons">dashboard</i>
               <p>Add Questions</p>
             </a>
@@ -72,8 +72,8 @@
 
         <div class="container-fluid">
 
-          <main class="py-1">
-            @yield('content')
+          <main>
+              @yield('content')
           </main>
 
         </div>

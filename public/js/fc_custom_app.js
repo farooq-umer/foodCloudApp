@@ -130,12 +130,6 @@ $( document ).ready(function() {
         }
         console.log(form.tblRowCount);
 
-        // let new_row = `<tr id="rowId${form.tblRowCount}">`;
-        // new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Name','form_type_name[]');
-        // new_row += form.createNewInputField(1,'text', 'Enter Questionnaire Code','form_type_code[]');
-        // new_row += '<td><button class="delRowBtn btn btn-danger"> <i class="material-icons">cancel</i></button></td>';
-        // new_row += '<tr>';
-
         let new_row = `<tr id="rowId${form.tblRowCount}">`;
         new_row += '<td><input type="text" placeholder="Enter Questionnaire Name" name="form_type_name[]" required class="form-control">';
         new_row += '<td><input type="text" placeholder="Enter Questionnaire Code" name="form_type_code[]" required class="form-control">';
@@ -228,7 +222,7 @@ $( document ).ready(function() {
         }
     };
 
-    saveNewQuestionnaireType = () => {
+    testFunction = () => {
 
         //window.location.href = $(this).data('href');
         const link = $('#btn-preview-button').data('href');

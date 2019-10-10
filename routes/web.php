@@ -47,3 +47,15 @@ Route::post('/question_types', 'QuestionTypesController@store')->name('create_qu
 Route::get('/question_types/{form}/edit', 'QuestionTypesController@edit')->name('show_edit_question_type')->middleware('auth');
 Route::patch('/question_types/{form}', 'QuestionTypesController@update')->name('update_question_type')->middleware('auth');
 Route::delete('/question_types/{form}', 'QuestionTypesController@destroy')->name('delete_question_type')->middleware('auth');
+
+// Add Questions
+Route::get('/add_questions', 'AddQuestionsController@index')->name('show_questionnaires_to_add_questions')->middleware('auth');
+Route::get('/add_questions/{form}/create', 'AddQuestionsController@create')->name('add_questions_to_questionnaire')->middleware('auth');
+
+//Route::get('/Questionnaires', 'QuestionnairesController@index')->name('show_forms_to_add_questions')->middleware('auth');
+//Route::get('/questions/create', 'QuestionsController@create')->name('show_create_question')->middleware('auth');
+//Route::get('/questions/{form}', 'QuestionsController@show')->name('show_question')->middleware('auth');
+Route::post('/add_questions', 'AddQuestionsController@store')->name('add_new_question')->middleware('auth');
+//Route::get('/questions/{form}/edit', 'QuestionsController@edit')->name('show_edit_question')->middleware('auth');
+//Route::patch('/questions/{form}', 'QuestionsController@update')->name('update_question')->middleware('auth');
+//Route::delete('/questions/{form}', 'QuestionsController@destroy')->name('delete_question')->middleware('auth');

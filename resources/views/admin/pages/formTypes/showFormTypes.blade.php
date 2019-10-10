@@ -17,8 +17,8 @@
         <div class="row">
             <div class="card">
                 <div class="card-header card-header-primary">
-                    <h4 class="card-title ">Questionnaire Types</h4>
-                    <p class="card-category"> Here you can View, Edit and Add Questionnaire Types</p>
+                    <h4 class="card-title "><b>Questionnaire Types</b></h4>
+                    <p class="card-category"> Here you can View, Edit and Add New Questionnaire Types</p>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
