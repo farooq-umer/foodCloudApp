@@ -18,10 +18,6 @@ class FormTypesController extends Controller
      */
     public function index()
     {
-        //$id = auth()->id(); $u = auth()->user(); $g = auth()->guest();
-        //dd($id,$u,$g);
-
-        //$formTypes = FormType::all()->sortKeysDesc(); //dd($formTypes);
         $formTypes = DB::table('tbl_form_types')->orderBy('form_type_id', 'desc')->get();
 
         return view('admin.pages.formTypes.showFormTypes', ['formTypes' => $formTypes]);
@@ -45,21 +41,6 @@ class FormTypesController extends Controller
      */
     public function store(Request $request)
     {
-        //Log::debug($request);
-
-        //retrieve all of the input data as an array
-        //$allArr = $request->all();
-        //Log::debug(print_r($allArr, true));
-
-        //$name = $request->input('name');
-        //$uri = $request->path();
-
-        // Without Query String...
-        //$url = $request->url();
-
-        // With Query String...
-        //$url = $request->fullUrl();
-
         if ($request->isMethod('POST')) {
 
             $validatedData = $request->validate([
@@ -73,13 +54,6 @@ class FormTypesController extends Controller
                 $formType->form_type_code = request('form_type_code.0');
                 $formType->save();
 
-                // Each array represents a row to be inserted into the table
-//                $id = DB::table('tbl_form_types')->insertGetId(
-//                    ['form_type_name' => request('form_type_name.0'),
-//                        'form_type_code' => request('form_type_code.0')
-//                    ]
-//                );
-
                 return response()->json([
                     'success'  => 'Form Type Created.'
                 ]);
@@ -91,31 +65,6 @@ class FormTypesController extends Controller
                 ]);
             }
         }
-
-        //https://laravel.com/docs/5.7/requests
-
-        //The is method allows you to verify that the incoming request path matches a given pattern.
-        // You may use the * character as a wildcard when utilizing this method:
-        //if ($request->is('admin/*')) { }
-
-//        if($request->ajax())
-//        {
-//            $first_name = $request->first_name;
-//            $last_name = $request->last_name;
-//            for($count = 0; $count < count($first_name); $count++)
-//            {
-//                $data = array(
-//                    'first_name' => $first_name[$count],
-//                    'last_name'  => $last_name[$count]
-//                );
-//                $insert_data[] = $data;
-//            }
-//
-//            FormType::insert($insert_data);
-//            return response()->json([
-//                'success'  => 'Data Added successfully.'
-//            ]);
-//        }
     }
 
     /**
@@ -137,9 +86,7 @@ class FormTypesController extends Controller
      */
     public function edit($form_type_id)
     {
-        //$formType = DB::table('tbl_form_types')->where('form_type_id', $form_type_id);
         $formType = FormType::findOrFail($form_type_id);
-        //dd($formType);
 
         return view('admin.pages.formTypes.editFormType', ['formType' => $formType]);
     }
@@ -153,10 +100,6 @@ class FormTypesController extends Controller
      */
     public function update(Request $request, FormType $formType, $form_type_id)
     {
-        //$allArr = $request->all(); //dd($allArr);
-        //$id = $request->input('form_type_id'); //dd($id);
-        //Log::debug(print_r($allArr, true));
-
         if ($request->isMethod('PATCH')) {
 
             $validatedData = $request->validate([
@@ -176,14 +119,6 @@ class FormTypesController extends Controller
                         ]
                     );
 
-//                $formType = FormType::findOrFail($form_type_id);
-//                $formType->update($request->all());
-
-//                $formType = FormType::findOrFail($form_type_id);
-//                $formType->form_type_name = request('form_type_name');
-//                $formType->form_type_code = request('form_type_code');
-//                $formType->save();
-
                 return redirect()->route('show_form_types')->with('success',"Questionnaire type {$form_type_name} Updated successfully!");
 
             } catch(QueryException $ex) {
@@ -191,7 +126,6 @@ class FormTypesController extends Controller
                 return response()->json([
                     'error'  => $ex->getMessage()
                 ]);
-                //Session::flash('error', $ex->getMessage());
             }
         }
     }
@@ -208,17 +142,14 @@ class FormTypesController extends Controller
         if ($request->isMethod('DELETE')) {
             try {
                 DB::table('tbl_form_types')->where('form_type_id', $form_type_id)->delete();
-//              $formTypeDeleted = FormType::findOrFail($form_type_id)->delete();
 
                 return redirect()->route('show_form_types')->with('warning',"Questionnaire type with with ID: {$form_type_id} DELETED successfully!");
-                //return back()->with('success','Questionnaire type DELETED successfully!');
 
             } catch (QueryException $ex) {
 
                 return response()->json([
                     'error'  => $ex->getMessage()
                 ]);
-                //Session::flash('error', $ex->getMessage());
             }
         }
     }

@@ -21,7 +21,6 @@ class FormsController extends Controller
             ->join('tbl_form_types', 'tbl_forms.form_type_id', '=', 'tbl_form_types.form_type_id')
             ->select('tbl_forms.*', 'tbl_form_types.form_type_name')
             ->get();
-        //dd($forms);
 
         return view('admin.pages.showForms', ['forms' => $forms]);
     }
@@ -34,7 +33,6 @@ class FormsController extends Controller
     public function create()
     {
         $formTypes = DB::table('tbl_form_types')->orderBy('form_type_id', 'desc')->get();
-        //$formTypeNames = DB::table('tbl_form_types')->pluck('form_type_name');
 
         return view('admin.pages.createForm', compact('formTypes'));
     }
@@ -47,7 +45,6 @@ class FormsController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
         if ($request->isMethod('POST')) {
 
             $validatedData = $request->validate([
@@ -102,7 +99,6 @@ class FormsController extends Controller
             ->join('tbl_form_types', 'tbl_forms.form_type_id', '=', 'tbl_form_types.form_type_id')
             ->select('tbl_forms.*', 'tbl_form_types.form_type_name')
             ->get();
-        //dd($formArr);
 
         return view('admin.pages.editForm', compact('formArr'));
     }

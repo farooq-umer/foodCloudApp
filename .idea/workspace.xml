@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f81d2a1-22db-435f-b9a2-446cea1c2061" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormTypesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormTypesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionTypesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionTypesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_014859_create__form_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_014859_create__form_types_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_020616_create_forms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_020616_create_forms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_021707_create__form_question_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_021707_create__form_question_types_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_021739_create__form_statuses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_021739_create__form_statuses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_021752_create__form_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_021752_create__form_questions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_021805_create__form_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_021805_create__form_answers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_021838_create__forms_submitted_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_021838_create__forms_submitted_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_07_022110_create__form_submitted_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_07_022110_create__form_submitted_questions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/fc_custom_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/fc_custom_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/forms/createForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/createForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/forms/editForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/editForm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/forms/formTypes/createFormType.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/formTypes/createFormType.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/forms/formTypes/editFormType.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/formTypes/editFormType.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/forms/formTypes/showFormTypes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/formTypes/showFormTypes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/forms/showForms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pages/showForms.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forms/showQuestionTypes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/showQuestionTypes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/baseLayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/baseLayout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,53 +19,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AddQuestionsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-              <folding>
-                <element signature="e#40#61#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_07_021805_create__form_answers_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-              <folding>
-                <element signature="e#7#52#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/fc_custom_app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/addQuestions.js">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/addQuestions/addQuestionsToQuestionnaire.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="66" column="42" lean-forward="true" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
+            <state relative-caret-position="-236">
+              <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+              <folding>
+                <element signature="e#40#53#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,9 +77,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_10_07_021805_create__form_answers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_10_07_021838_create__forms_submitted_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_10_07_022110_create__form_submitted_questions_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FormsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/QuestionTypesController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FormTypesController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/showQuestionTypes.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/showForms.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/formTypes/showFormTypes.blade.php" />
@@ -160,6 +98,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AddQuestionsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pages/addQuestions/addQuestionsToQuestionnaire.blade.php" />
         <option value="$PROJECT_DIR$/public/js/addQuestions.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FormTypesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FormsController.php" />
       </list>
     </option>
   </component>
@@ -409,12 +349,12 @@
       <option name="presentableId" value="Default" />
       <updated>1570372899061</updated>
       <workItem from="1570372900675" duration="1134000" />
-      <workItem from="1570374458715" duration="198603000" />
+      <workItem from="1570374458715" duration="199210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199737000" />
+    <option name="totallyTimeSpent" value="200344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -547,13 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/formTypes/editFormType.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -579,16 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-649">
           <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QuestionTypesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="e#40#62#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,26 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormTypesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="140" column="56" lean-forward="true" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
-          <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="38" column="68" lean-forward="true" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
-          <folding>
-            <element signature="e#40#53#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/FormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -764,26 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AddQuestionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_07_021805_create__form_answers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/fc_custom_app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -798,6 +681,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/addQuestions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_07_021805_create__form_answers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -805,10 +712,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/addQuestions.js">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AddQuestionsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+        <state relative-caret-position="1007">
+          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/QuestionTypesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-755">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding>
+            <element signature="e#40#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormTypesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FormsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-236">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+          <folding>
+            <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
