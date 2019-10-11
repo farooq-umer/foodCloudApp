@@ -29,8 +29,8 @@
 
         <div class="container-fluid">
           <main>
-            {{-- if content section is undefined, then noContent view will be rendered --}}
-            @yield('content', View::make('pages.NoContent'))
+            {{-- if content section is undefined, then contentSectionNotFound view will be rendered --}}
+            @yield('content', View::make('pages.contentSectionNotFound'))
           </main>
         </div>
       </div>
