@@ -22,17 +22,14 @@
       </header>
 
       <div class="content">
-
         <div class="container">
           @include('includes.flash-message')
         </div>
 
-        <div class="container-fluid">
-          <main>
-            {{-- if content section is undefined, then contentSectionNotFound view will be rendered --}}
-            @yield('content', View::make('pages.contentSectionNotFound'))
-          </main>
-        </div>
+        <main>
+          {{-- if content section is undefined, then contentSectionNotFound view will be rendered --}}
+          @yield('content', View::make('pages.contentSectionNotFound'))
+        </main>
       </div>
 
       <footer class="footer">

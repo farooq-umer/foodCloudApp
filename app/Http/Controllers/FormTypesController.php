@@ -3,14 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\FormType;
+use App\Http\Requests\StoreFormTypeRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Database\QueryException;
-use DB;
 use Session;
+use DB;
 
 class FormTypesController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -39,15 +50,9 @@ class FormTypesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreFormTypeRequest $request)
     {
         if ($request->isMethod('POST')) {
-
-            $validatedData = $request->validate([
-                'form_type_name.*' => 'required|string|distinct|min:6|regex:/^[A-Za-z0-9 _.-]*$/',
-                'form_type_code.*' => 'required|string|distinct|min:3|regex:/^[A-Za-z0-9 _.-]*$/'
-            ]);
-
             try {
                 $formType = new FormType();
                 $formType->form_type_name = request('form_type_name.0');
@@ -98,14 +103,9 @@ class FormTypesController extends Controller
      * @param  \App\FormType  $formType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, FormType $formType, $form_type_id)
+    public function update(StoreFormTypeRequest $request, FormType $formType, $form_type_id)
     {
         if ($request->isMethod('PATCH')) {
-
-            $validatedData = $request->validate([
-                'form_type_name' => 'required|string|distinct|min:6|regex:/^[A-Za-z0-9 _.-]*$/',
-                'form_type_code' => 'required|string|distinct|min:3|regex:/^[A-Za-z0-9 _.-]*$/'
-            ]);
 
             $form_type_name = request('form_type_name');
             $form_type_code = request('form_type_code');
