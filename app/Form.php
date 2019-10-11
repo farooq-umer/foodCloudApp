@@ -15,6 +15,20 @@ class Form extends Model
      * @var array
      */
     protected $fillable = [
-        'form_name', 'form_description', 'form_type_id', 'created_at'
+        'form_name',
+        'form_description',
+        'form_type_id',
+        'form_data_json'
     ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('is_active', 1);
+    }
+
+    public function scopeInactive($query)
+    {
+        return $query->where('is_active', 0);
+    }
+
 }

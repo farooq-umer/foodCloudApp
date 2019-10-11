@@ -2,64 +2,21 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
   @include('includes.head')
-  <title>@if(View::hasSection('title'))@yield('title') - @endif{{ config('app.name', 'Food Cloud') }}</title>
+
+  <title>
+    @hasSection('title')
+      @yield('title') -
+    @endif
+      {{ config('app.name') }}
+  </title>
 </head>
 
 <body>
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white">
-      <!--
-      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-      Tip 2: you can also add an image using data-image tag
-      -->
-      <div class="logo">
-        <a href="javascript:void(0);" class="simple-text logo-normal">
-          Food Cloud
-        </a>
-      </div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('home') }}">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item {{ Request::is('form_types') ? 'active' : '' }} ">
-            <a class="nav-link" href="{{ route('show_form_types') }}">
-              <i class="material-icons">dashboard</i>
-              <p>Questionnaire Types</p>
-            </a>
-          </li>
-          <li class="nav-item {{ Request::is('question_types') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('show_question_types') }}">
-              <i class="material-icons">dashboard</i>
-              <p>Question Types</p>
-            </a>
-          </li>
-          <li class="nav-item {{ Request::is('forms') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('show_forms') }}">
-              <i class="material-icons">dashboard</i>
-              <p>Questionnaires</p>
-            </a>
-          </li>
-          <li class="nav-item {{ Request::is('add_questions') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('show_questionnaires_to_add_questions') }}">
-              <i class="material-icons">dashboard</i>
-              <p>Add Questions</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link alert-danger text-danger" href="{{ route('show_form_types') }}">
-              <i class="material-icons text-danger">warning</i>
-              <p><b>DELETE ZONE</b></p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="main-panel">
 
+    @include('includes.sidebar')
+
+    <div class="main-panel">
       <header>
         @include('includes.header')
       </header>
@@ -71,11 +28,10 @@
         </div>
 
         <div class="container-fluid">
-
           <main>
-              @yield('content')
+            {{-- if content section is undefined, then noContent view will be rendered --}}
+            @yield('content', View::make('pages.NoContent'))
           </main>
-
         </div>
       </div>
 
@@ -87,6 +43,11 @@
   </div>
 
   @include('includes.scripts')
+
+{{-- @hasSection checks if a section has content --}}
+  @hasSection('page-script')
+    @yield('page-script')
+  @endif
 
 </body>
 

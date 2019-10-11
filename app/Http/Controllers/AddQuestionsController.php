@@ -51,7 +51,7 @@ class AddQuestionsController extends Controller
         //$f = request('form_id'); dd($f);
         //$is = request('is_mandatory'); dd($is);
         //$q = request('form_question'); dd($q);
-        //$a = request('is_answer'); dd($a);
+        // $a = request('is_answer'); dd($a);
 
     }
 
