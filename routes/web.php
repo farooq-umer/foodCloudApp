@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 // Form Types
 //Route::resource('form_types', 'FormTypesController')->name('index','show_form_types')->middleware('auth');

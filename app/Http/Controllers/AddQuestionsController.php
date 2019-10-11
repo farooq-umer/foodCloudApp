@@ -22,7 +22,7 @@ class AddQuestionsController extends Controller
             ->get();
         //dd($forms);
 
-        return view('admin.pages.addQuestions.showFormsToAddQuestions', ['forms' => $forms]);
+        return view('dashboard.addQuestions.showFormsToAddQuestions', ['forms' => $forms]);
     }
 
     /**
@@ -36,7 +36,7 @@ class AddQuestionsController extends Controller
         $form = Form::findOrFail($form_id);
         //dd($formQTypes);
 
-        return view('admin.pages.addQuestions.addQuestionsToQuestionnaire', compact('formQTypes', 'form'));
+        return view('dashboard.addQuestions.addQuestionsToQuestionnaire', compact('formQTypes', 'form'));
     }
 
     /**
