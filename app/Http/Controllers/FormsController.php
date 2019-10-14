@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Form;
+use App\Models\Form;
+use App\Repositories\RpForms;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
-use DB;
 use Session;
+use DB;
 
 class FormsController extends Controller
 {
+    protected $rpForms;
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(RpForms $rpForms)
     {
+        $this->rpForms = $rpForms;
         $this->middleware('auth');
     }
 
@@ -27,6 +30,9 @@ class FormsController extends Controller
      */
     public function index()
     {
+        //$questionType = $this->rpForms->getQuestionTypeByCode('TEXT');
+        //dd($questionType);
+
         $forms = DB::table('tbl_forms')
             ->join('tbl_form_types', 'tbl_forms.form_type_id', '=', 'tbl_form_types.form_type_id')
             ->select('tbl_forms.*', 'tbl_form_types.form_type_name')

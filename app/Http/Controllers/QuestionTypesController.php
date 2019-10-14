@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\QuestionTypes;
+use App\Models\QuestionType;
 use Illuminate\Http\Request;
 use DB;
 
@@ -54,10 +54,10 @@ class QuestionTypesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\QuestionTypes  $questionTypes
+     * @param  QuestionType  $questionType
      * @return \Illuminate\Http\Response
      */
-    public function show(QuestionTypes $questionTypes)
+    public function show(QuestionType $questionType)
     {
         //
     }
@@ -65,10 +65,10 @@ class QuestionTypesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\QuestionTypes  $questionTypes
+     * @param  QuestionType  $questionType
      * @return \Illuminate\Http\Response
      */
-    public function edit(QuestionTypes $questionTypes)
+    public function edit(QuestionType $questionType)
     {
         //
     }
@@ -76,11 +76,11 @@ class QuestionTypesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\QuestionTypes  $questionTypes
+     * @param  Request  $request
+     * @param  QuestionType  $questionType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, QuestionTypes $questionTypes)
+    public function update(Request $request, QuestionType $questionType)
     {
         //
     }
@@ -88,10 +88,10 @@ class QuestionTypesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\QuestionTypes  $questionTypes
+     * @param  QuestionType  $questionType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(QuestionTypes $questionTypes)
+    public function destroy(QuestionType $questionType)
     {
         //
     }

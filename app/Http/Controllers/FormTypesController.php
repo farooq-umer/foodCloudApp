@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\FormType;
+use App\Models\FormType;
 use App\Http\Requests\StoreFormTypeRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -19,9 +19,11 @@ class FormTypesController extends Controller
      */
     public function __construct()
     {
+        //$this->middleware('auth')->except(['function_name','function_name']);
+        //$this->middleware('auth')->only('function_name');
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -47,7 +49,7 @@ class FormTypesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param StoreFormTypeRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreFormTypeRequest $request)
@@ -99,8 +101,9 @@ class FormTypesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\FormType  $formType
+     * @param StoreFormTypeRequest $request
+     * @param FormType $formType
+     * @param $form_type_id
      * @return \Illuminate\Http\Response
      */
     public function update(StoreFormTypeRequest $request, FormType $formType, $form_type_id)

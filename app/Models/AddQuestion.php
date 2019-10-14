@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AddQuestions extends Model
+class AddQuestion extends Model
 {
     protected $table = 'tbl_form_question';
     protected $primaryKey = 'form_question_id';

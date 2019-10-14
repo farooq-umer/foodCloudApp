@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\AddQuestions;
+use App\Models\AddQuestion;
 use Illuminate\Http\Request;
-use App\Form;
+use App\Models\Form;
 use DB;
 
 class AddQuestionsController extends Controller
@@ -68,10 +68,10 @@ class AddQuestionsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\AddQuestions  $addQuestions
-     * @return \Illuminate\Http\Response
+     * @param AddQuestion $addQuestions
+     * @return void
      */
-    public function show(AddQuestions $addQuestions)
+    public function show(AddQuestion $addQuestions)
     {
         //
     }
@@ -79,10 +79,10 @@ class AddQuestionsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\AddQuestions  $addQuestions
+     * @param  \App\AddQuestion  $addQuestions
      * @return \Illuminate\Http\Response
      */
-    public function edit(AddQuestions $addQuestions)
+    public function edit(AddQuestion $addQuestions)
     {
         //
     }
@@ -91,10 +91,10 @@ class AddQuestionsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\AddQuestions  $addQuestions
+     * @param  \App\AddQuestion  $addQuestions
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AddQuestions $addQuestions)
+    public function update(Request $request, AddQuestion $addQuestions)
     {
         //
     }
@@ -102,10 +102,10 @@ class AddQuestionsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\AddQuestions  $addQuestions
+     * @param  \App\AddQuestion  $addQuestions
      * @return \Illuminate\Http\Response
      */
-    public function destroy(AddQuestions $addQuestions)
+    public function destroy(AddQuestion $addQuestions)
     {
         //
     }
