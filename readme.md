@@ -1,3 +1,15 @@
+## FoodClod App Setup
+
+- Clone this repo.
+- Run composer install.
+- Set up your environment (.env) file. (app name, database connection etc.)
+- Run migrations to create database schema and tables.
+- Migrations can be found in app/database/migrations folder.
+- Good Luck!
+
+FoodClod App is bases on *Laravel 6*. If you want to know about Laravel please continue reading.
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
