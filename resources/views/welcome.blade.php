@@ -20,18 +20,6 @@
                 margin: 0;
             }
 
-            .fc-bg-primary {
-                background-color: #00c1d5;
-            }
-
-            .fc-bg-img {
-                background-image: url('{{ asset('assets/img/fc-bg-img.jpeg') }}');
-                background-size: cover;
-                background-position: top center;
-                -webkit-filter: brightness(95%); /* Safari 6.0 - 9.0 */
-                filter: brightness(95%);
-            }
-
             .full-height {
                 height: 100vh;
             }
@@ -74,6 +62,8 @@
                 margin-bottom: 30px;
             }
         </style>
+        <!-- Custom CSS -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
     </head>
     <body>
     <div class="page-header header-filter fc-bg-img">
